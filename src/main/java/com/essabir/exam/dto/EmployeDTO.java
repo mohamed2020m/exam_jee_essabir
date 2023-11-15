@@ -1,9 +1,11 @@
 package com.essabir.exam.dto;
 
+import com.essabir.exam.entities.Employe;
 import com.essabir.exam.entities.Service;
 import jakarta.persistence.ManyToOne;
 
 import java.util.Date;
+import java.util.List;
 
 public class EmployeDTO {
     private Long id;
@@ -12,6 +14,7 @@ public class EmployeDTO {
     private Date dateNaissance;
     private String photo;
     private Service service;
+    private boolean isChef;
 
     public EmployeDTO() {
     }
@@ -62,5 +65,13 @@ public class EmployeDTO {
 
     public void setService(Service service) {
         this.service = service;
+    }
+
+    public boolean isChef() {
+        return isChef;
+    }
+
+    public void setChef(boolean chef) {
+        isChef = chef;
     }
 }

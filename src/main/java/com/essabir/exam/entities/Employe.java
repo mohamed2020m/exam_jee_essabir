@@ -1,5 +1,6 @@
 package com.essabir.exam.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.Date;
@@ -22,6 +23,7 @@ public class Employe {
     private Service service;
 
     @OneToMany(mappedBy = "chef")
+    @JsonIgnore
     private List<Employe> employeList;
 
     @ManyToOne

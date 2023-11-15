@@ -98,4 +98,8 @@ public class EmployeService implements IDoa<Employe> {
         }
         return false;
     }
+
+    public List<Employe> findByService(com.essabir.exam.entities.Service service){
+        return employeEmploye.findByService(service);
+    }
 }
